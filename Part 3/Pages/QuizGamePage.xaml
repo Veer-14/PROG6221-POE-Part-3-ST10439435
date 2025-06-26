@@ -1,0 +1,60 @@
+﻿<Page x:Class="Part_3.Pages.QuizGamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Part_3.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="QuizGamePage">
+
+    <Grid Background="#34495E" Margin="0">
+        <Border Background="#2C3E50"
+                CornerRadius="15"
+                Padding="20"
+                Margin="20"
+                BorderBrush="#1ABC9C"
+                BorderThickness="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Question -->
+                    <RowDefinition Height="*"/>
+                    <!-- Options -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Feedback -->
+                </Grid.RowDefinitions>
+
+                <!-- Question Text -->
+                <TextBlock x:Name="QuestionTextBlock"
+                           Grid.Row="0"
+                           Text="Question will appear here"
+                           Foreground="White"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           FontFamily="Segoe UI"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,15"/>
+
+                <!-- Options Buttons Panel -->
+                <StackPanel x:Name="OptionButtonsPanel"
+                            Grid.Row="1"
+                            VerticalAlignment="Top"
+                            />
+
+                <!-- Feedback Text -->
+                <TextBlock x:Name="FeedbackTextBlock"
+                           Grid.Row="2"
+                           Text=""
+                           Foreground="#1ABC9C"
+                           FontSize="16"
+                           FontFamily="Segoe UI"
+                           FontWeight="SemiBold"
+                           Margin="0,15,0,0"
+                           TextWrapping="Wrap"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
