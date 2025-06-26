@@ -101,11 +101,18 @@ namespace Part_3.Pages
                 return;
             }
 
-            // Step 2: Capture Interest
+            // Step 2: Capture Interest and displays what a user can ask
             if (!userMemory.ContainsKey("interest"))
             {
                 userMemory["interest"] = input;
-                AppendText($"ChatBot: Got it! You like {input}. You can now ask for tips or add tasks!\n");
+                AppendText($"ChatBot: Got it! You like {input}. You can now ask about:\n" +
+                           " - How to create strong passwords\n" +
+                           " - How to recognize phishing emails\n" +
+                           " - How to protect personal data\n" +
+                           " - Or express how you feel, like 'I'm worried about scams.'\n" +
+                           " - Type 'password tips', 'phishing tips' etc. for detailed tips\n" +
+                           " - You can 'Add a task' or 'view your tasks'\n" +
+                           " - Type 'exit' to quit.\n");
                 return;
             }
 
@@ -255,7 +262,7 @@ namespace Part_3.Pages
                 return;
             }
 
-            // Step 9: Sentiment
+            // Step 9: Handels Sentiment responses
             foreach (var feeling in sentimentResponses)
             {
                 if (lowerInput.Contains(feeling.Key))

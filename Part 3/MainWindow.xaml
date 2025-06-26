@@ -12,15 +12,15 @@
         ResizeMode="NoResize">
 
     <Grid>
-       
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
-            
+
             <ColumnDefinition Width="*"/>
-            
+
         </Grid.ColumnDefinitions>
 
-       
+
         <StackPanel Background="#2C3E50" VerticalAlignment="Stretch" Grid.Column="0">
             <TextBlock Text="🛡️ CyberBot"
                        Foreground="White"
@@ -31,13 +31,13 @@
 
             <Button Content="Chat" Click="GoToChat_Click" Margin="10" Padding="10"
                     Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
-            
+
             <Button Content="Quiz" Click="GoToQuiz_Click" Margin="10" Padding="10"
                     Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
-            
+
         </StackPanel>
 
-        
+
         <Frame x:Name="MainFrame"
                Grid.Column="1"
                NavigationUIVisibility="Hidden"
