@@ -38,12 +38,6 @@ namespace Part_3
             MainFrame.Navigate(new Pages.QuizGamePage());
         }
 
-        private void GoToLog_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new Pages.ActivityLogPage());
-        }
-
-
-    }
+       }
 
 }
